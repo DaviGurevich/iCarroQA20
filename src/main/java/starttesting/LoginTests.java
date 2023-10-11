@@ -27,19 +27,20 @@ public class LoginTests {
     @Test
     public void loginPositive(){
 
-        WebElement btnLogin = driver.findElement(By.xpath(""));
+        WebElement btnLogin = driver.findElement(By.xpath("//a[contains(@href, '/login')]"));
         btnLogin.click();
-        WebElement inputEmail = driver.findElement(By.xpath(""));
+
+        WebElement inputEmail = driver.findElement(By.xpath("//input[@id='email']"));
         inputEmail.click();
         inputEmail.clear();
-        inputEmail.sendKeys();
+        inputEmail.sendKeys("aaaa@mail.com");
 
-        WebElement inputPassword = driver.findElement(By.xpath(""));
+        WebElement inputPassword = driver.findElement(By.xpath("//input[@id='password']"));
         inputPassword.click();
         inputPassword.clear();
-        inputPassword.sendKeys();
+        inputPassword.sendKeys("KOs647R34&");
 
-        WebElement btnYalla = driver.findElement(By.xpath(""));
+        WebElement btnYalla = driver.findElement(By.xpath("//button[@type='submit']"));
         btnYalla.click();
 
         WebElement textMessagePopUph2 = driver.findElement(By.xpath("//h2[@class='message']"));
